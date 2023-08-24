@@ -8,6 +8,7 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "./mode-toggle";
+import MobileSidebar from "./MobileSidebar";
 
 const font = Poppins({
   weight: "600",
@@ -16,9 +17,9 @@ const font = Poppins({
 
 const Navbar = () => {
   return (
-    <div className="fixed w-full z-50 flex justify-between items-center py-2 px-4 border-b border-primary/10 bg-secondary">
+    <div className="fixed w-full z-50 h-16 flex justify-between items-center py-2 px-4 border-b border-primary/10 bg-secondary">
       <div className="flex items-center">
-        <Menu className="block md:hidden" />
+        <MobileSidebar/>
         <Link href="/">
           <h1
             className={cn(
