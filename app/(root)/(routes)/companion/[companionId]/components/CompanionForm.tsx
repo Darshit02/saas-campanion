@@ -5,6 +5,7 @@ import { Category, Companion } from "@prisma/client";
 import { useForm } from "react-hook-form";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { Separator } from "@/components/ui/separator";
+import { ImageUpload } from "./image-upload";
 
 interface CFProps {
   initialData: Companion | null;
@@ -68,7 +69,7 @@ const CompanionForm = ({ categories, initialData }: CFProps) => {
             render={({ field }) => (
               <FormItem className="flex flex-col justify-center sapce-y-4 ">
                 <FormControl>
-                    Image Upload Component
+                    <ImageUpload disabled={isLoading} onChange={field.onChange} value={field.value}/>
                 </FormControl>
                 <FormMessage/>
               </FormItem>
