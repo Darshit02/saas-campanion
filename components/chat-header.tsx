@@ -38,7 +38,6 @@ const ChatHeader =  ({ companion }: CHProps) => {
   const onDelete = async() => {
     try {
       await axios.delete(`/api/companion/${companion.id}`)
-
       toast ({
         description : "Success"
       })
