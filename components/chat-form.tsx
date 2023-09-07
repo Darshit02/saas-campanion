@@ -23,7 +23,7 @@ const ChatForm = ({
   onSubmmit,
 }: CFProps) => {
   return (
-    <form onSubmit={onSubmmit} className="border-t border-primary/10 py-4 flex items-center gap-x-2">
+    <form onSubmit={onSubmmit} className="border-t border-primary/10 py-4 flex items-center gap-x-2 sticky bottom-0 bg-secondary ">
     <Input
       disabled={isLoading}
       value={input}
